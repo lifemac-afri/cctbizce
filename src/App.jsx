@@ -19,25 +19,23 @@ function App() {
         {
           path: "",
           index: true,
-          element: <Home />, // Home page
+          element: <Home />,
         },
         {
           path: "about",
-          element: <About />, // About page
+          element: <About />,
         },
         {
           path: "services",
-          element: <Services />, // Services page
-          children: [
-            {
-              path: ":serviceId", // Dynamic route for service details
-              element: <ServiceDetails />,
-            },
-          ],
+          element: <Services />,
+        },
+        {
+          path: "services/:serviceId",
+          element: <ServiceDetails />,
         },
         {
           path: "contact",
-          element: <Contact />, // Contact page
+          element: <Contact />,
         },
       ],
     },

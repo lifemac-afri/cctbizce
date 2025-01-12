@@ -1,5 +1,8 @@
+import { useParams } from "react-router-dom";
+
 const ServiceDetails = () => {
-  return <div>ServiceDetails</div>;
+  const { serviceId } = useParams();
+  return <div>ServiceDetails {serviceId}</div>;
 };
 
 export default ServiceDetails;

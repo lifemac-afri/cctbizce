@@ -75,7 +75,7 @@ const Carousel = () => {
       {text.map((item, index) => (
         <div
           key={index}
-          className="w-full h-[700px] overflow-hidden bg-cover bg-center relative rounded-3xl shadow"
+          className="w-full h-[700px] overflow-hidden bg-cover bg-center relative rounded-3xl shadow "
           //   style={{ backgroundImage: `url(${item.background})` }}
         >
           <img
@@ -85,7 +85,7 @@ const Carousel = () => {
           />
 
           <div
-            className="absolute z-20 inset-0 bg-white w-full h-full flex items-center container px-10 lg:px-28 "
+            className="absolute z-20 inset-0 w-full h-full flex items-center container px-10 lg:px-28 "
             style={{
               background:
                 "linear-gradient(to right, white 45%, transparent 100%)",
