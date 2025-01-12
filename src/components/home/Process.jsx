@@ -31,7 +31,7 @@ const Process = () => {
   ];
   return (
     <div className="what-about-container pb-20">
-      <div className="semi-circle bg-white">
+      <div className="semi-circle bg-gray-50">
         <a href="#process">
           <div className="center-circle  bg-primary_green">
             <FaArrowDown className="fill-white w-9 h-9" />

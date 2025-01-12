@@ -5,7 +5,7 @@ import { handshake } from "../../assets";
 const WhatAbout = () => {
   return (
     <div className="what-about-container">
-      <div className="semi-circle bg-white">
+      <div className="semi-circle bg-gray-50">
         <a href="#what-about">
           <div className="center-circle  bg-primary_green">
             <FaArrowDown className="fill-white w-9 h-9" />
