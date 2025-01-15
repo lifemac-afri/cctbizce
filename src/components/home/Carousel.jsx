@@ -40,7 +40,6 @@ const Carousel = () => {
     autoplaySpeed: 3000,
     arrows: false,
     fade: true,
-    waitForAnimate: false,
   };
   return (
     // <div

@@ -90,7 +90,7 @@ const NavHeader = () => {
         <div className="flex items-center space-x-4">
           <div className="container mx-auto flex justify-center space-x-4 gap-2">
             <a
-              href="//https://www.facebook.com/cctbizce"
+              href="//www.facebook.com/cctbizce"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-primary_green"
@@ -98,7 +98,7 @@ const NavHeader = () => {
               <FaFacebook className="w-5 h-5" />
             </a>
             <a
-              href="//https://www.instagram.com/cctbizce/"
+              href="//www.instagram.com/cctbizce/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-primary_green"
@@ -106,7 +106,7 @@ const NavHeader = () => {
               <FaInstagram className="w-5 h-5" />
             </a>
             <a
-              href="//https://x.com/cctbizce"
+              href="//x.com/cctbizce"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-primary_green"
@@ -114,7 +114,7 @@ const NavHeader = () => {
               <BsTwitterX className="w-5 h-5" />
             </a>
             <a
-              href="//https://www.linkedin.com/company/cctbizce/ "
+              href="//www.linkedin.com/company/cctbizce/ "
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-primary_green"

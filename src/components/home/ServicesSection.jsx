@@ -49,7 +49,7 @@ const ServicesSection = () => {
   return (
     <div className="bg-[#F2EEE6] pt-16 mt-2 pb-32 ">
       <div className="max-w-4xl mx-auto px-6 ">
-        <h2 className="text-center text-green-600 text-sm font-semibold mb-4">
+        <h2 className="text-center text-dark_green text-sm font-semibold mb-4">
           OUR SERVICE
         </h2>
         <h3 className="text-center text-2xl font-bold text-gray-900 mb-8">
@@ -70,7 +70,7 @@ const ServicesSection = () => {
               ></div>
               {/* Content */}
               <div className="relative z-10 flex items-center gap-5 justify-between">
-                <div className="p-2 text-green-600  group-hover:text-white transition duration-500 ease-out">
+                <div className="p-2 text-primary_green  group-hover:text-white transition duration-500 ease-out">
                   {service.icon}
                 </div>
                 <div className="grid grid-cols-2 gap-3">

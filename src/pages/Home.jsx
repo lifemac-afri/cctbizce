@@ -1,5 +1,7 @@
 import {
   Carousel,
+  Contact,
+  Portfolio,
   Process,
   ServicesSection,
   WhatAbout,
@@ -16,6 +18,8 @@ const Home = () => {
       </div>
       <ServicesSection />
       <Process />
+      <Portfolio />
+      <Contact />
     </div>
   );
 };

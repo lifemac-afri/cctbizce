@@ -5,4 +5,18 @@ import car3 from "./handshake.png";
 import handshake from "./shake.png";
 import engage from "./engage.png";
 import develop from "./develop.png";
-export { logo, car1, car2, car3, handshake, engage, develop };
+import side from "./side.jpg";
+import dotted from "./dotted.png";
+import dottedw from "./dottedw.png";
+export {
+  logo,
+  car1,
+  car2,
+  car3,
+  handshake,
+  engage,
+  develop,
+  side,
+  dotted,
+  dottedw,
+};

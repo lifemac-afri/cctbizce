@@ -45,7 +45,7 @@ const Process = () => {
       >
         <section className="pt-10 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h4 className="text-sm font-semibold text-green-600 uppercase">
+            <h4 className="text-sm font-semibold text-dark_green uppercase">
               Our Process
             </h4>
             <h3 className="text-3xl font-bold text-gray-800 ">
@@ -72,7 +72,7 @@ const Process = () => {
                   </div>
 
                   {/* Step Indicator */}
-                  <span className="absolute top-0 left-1/2 transform -translate-y-2/3 -translate-x-1/2 bg-green-600 text-white text-xs font-semibold py-1 px-3 rounded-md">
+                  <span className="absolute top-0 left-1/2 transform -translate-y-2/3 -translate-x-1/2 bg-dark_green text-white text-xs font-semibold py-1 px-3 rounded-md">
                     STEP {step.id}
                   </span>
 
