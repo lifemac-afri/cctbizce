@@ -1,6 +1,7 @@
 import {
   Carousel,
   Contact,
+  Footer,
   Portfolio,
   Process,
   ServicesSection,
@@ -20,6 +21,7 @@ const Home = () => {
       <Process />
       <Portfolio />
       <Contact />
+      <Footer />
     </div>
   );
 };

@@ -8,6 +8,7 @@ import develop from "./develop.png";
 import side from "./side.jpg";
 import dotted from "./dotted.png";
 import dottedw from "./dottedw.png";
+import person_on_call from "./person_on_call.png";
 export {
   logo,
   car1,
@@ -19,4 +20,5 @@ export {
   side,
   dotted,
   dottedw,
+  person_on_call,
 };

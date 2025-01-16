@@ -6,7 +6,7 @@ export default {
       colors: {
         primary_green: "#85C323",
         dark_green: "#85A123",
-        primary_gray: "rgb(51 65 85)",
+        primary_gray: "#373D4B",
       },
     },
   },
