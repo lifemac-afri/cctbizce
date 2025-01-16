@@ -153,15 +153,15 @@ const NavHeader = () => {
           <nav className="flex flex-col space-y-4 px-4 py-2">
             <div className="flex justify-between items-center mb-4">
               {/* Branding & WhatsApp only in mobile */}
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <img src={logo} alt="Rowix Logo" className="h-10 w-10" />
                 <div className="text-base font-bold text-gray-800">
                   CCT Business Consult
                 </div>
-              </div>
+              </div> */}
               <a
                 href="https://wa.link/49ca5k"
-                className="bg-primary_green text-white px-4 py-2 rounded shadow-md text-sm font-semibold whitespace-nowrap flex items-center gap-2"
+                className="bg-primary_green text-white px-4 py-2 rounded shadow-md text-sm font-semibold whitespace-nowrap flex items-center gap-2 mt3"
               >
                 LET&apos;S TALK{" "}
                 <span>
