@@ -45,7 +45,7 @@ const Process = () => {
       >
         <section className="pt-10 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h4 className="text-sm font-semibold text-dark_green uppercase">
+            <h4 className="text-sm font-semibold text-dark_green uppercase mb-5">
               Our Process
             </h4>
             <h3 className="text-3xl font-bold text-gray-800 ">

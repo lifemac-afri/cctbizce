@@ -57,17 +57,17 @@ const data = [
     title: "About Us",
     link: "/about",
   },
+  { title: "Contact", link: "/contact" },
   {
     title: "Services",
     link: "/services",
     items: services,
   },
+  { title: "Resource Docs", link: "/downloads", items: [] },
   {
     title: "Blog",
     link: "/blog",
   },
-  { title: "Resource Docs", link: "/downloads", items: [] },
-  { title: "Contact", link: "/contact" },
 ];
 
 export default data;

@@ -59,7 +59,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative group px-5 py-5 border-b-[1px] border-gray-400 hover:rounded-md overflow-hidden cursor-pointer h-32 flex items-center"
+              className="relative group px-5 py-5 border-b-[1px] border-gray-400 hover:rounded-md overflow-hidden cursor-pointer lg:h-32 flex items-center"
             >
               {/* Background image */}
               <div
@@ -73,11 +73,19 @@ const ServicesSection = () => {
                 <div className="p-2 text-primary_green  group-hover:text-white transition duration-500 ease-out">
                   {service.icon}
                 </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <h4 className="font-semibold text-gray-800 group-hover:text-white transition duration-500 ease-out text-lg flex-1 w-full">
+                <div className="grid-cols-2 gap-3 hidden lg:grid">
+                  <h4 className="font-semibold text-gray-800 group-hover:text-white transition duration-500 ease-out text-lg flex-1 w-full ">
                     {service.title}
                   </h4>
                   <p className="text-sm text-gray-600 group-hover:text-white transition duration-500 ease-out flex-1">
+                    {service.description}
+                  </p>
+                </div>
+                <div className="flex-1 lg:hidden py-2">
+                  <h4 className="font-semibold text-gray-800 group-hover:text-white text-lg transition-colors duration-500">
+                    {service.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 group-hover:text-white mt-1 transition-colors duration-500">
                     {service.description}
                   </p>
                 </div>

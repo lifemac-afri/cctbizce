@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import FirstHeader from "../components/headers/FirstHeader";
 import NavHeader from "../components/headers/NavHeader";
+import Footer from "../components/common/Footer";
 
 const Layout = () => {
   return (
@@ -10,6 +11,7 @@ const Layout = () => {
       <main className="flex-grow w-full">
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 };

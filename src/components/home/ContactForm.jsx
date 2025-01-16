@@ -9,6 +9,7 @@ const ContactForm = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(""); // State for error message
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -49,19 +50,20 @@ const ContactForm = () => {
       if (response.ok) {
         setIsSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
+        setErrorMessage(""); // Clear any error message
       } else {
         console.error("Failed to submit form");
-        alert("Failed to submit the form. Please try again.");
+        setErrorMessage("Failed to submit the form. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      setErrorMessage("An error occurred. Please try again.");
     }
   };
 
   if (isSubmitted) {
     return (
-      <div className="w-[500px] flex flex-col items-center gap-5">
+      <div className="w-full max-w-md mx-auto flex flex-col items-center gap-5">
         <h2 className="text-2xl font-bold text-dark_green">
           Thank you for reaching out!
         </h2>
@@ -82,18 +84,19 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-[500px] flex flex-col items-start gap-5"
+      className="w-full max-w-md mx-auto flex flex-col items-start gap-5"
     >
-      <div className="w-full flex gap-4 items-center justify-center">
+      {/* Form Inputs for Name and Email */}
+      <div className="w-full flex flex-col sm:flex-row gap-4">
         <input
           type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleInputChange}
-          placeholder="full name"
+          placeholder="Full name"
           required
-          className="mt-1 p-2 w-full bg-[#dfdacf] bg-opacity-20  border-gray-300 rounded-md focus:border-[#F2EEE6]"
+          className="mt-1 p-2 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:border-[#F2EEE6] focus:outline-none"
         />
         <input
           type="email"
@@ -101,12 +104,13 @@ const ContactForm = () => {
           name="email"
           value={formData.email}
           onChange={handleInputChange}
-          placeholder="email address"
+          placeholder="Email address"
           required
-          className="mt-1 p-2 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:ring-[#F2EEE6] focus:border-[#F2EEE6]"
+          className="mt-1 p-2 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:ring-[#F2EEE6] focus:border-[#F2EEE6] focus:outline-none"
         />
       </div>
 
+      {/* Message Textarea */}
       <div className="w-full">
         <textarea
           id="message"
@@ -114,13 +118,19 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleInputChange}
           required
-          placeholder="how can we help you?"
+          placeholder="How can we help you?"
           className="h-64 p-2 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:ring-[#F2EEE6] focus:border-[#F2EEE6] resize-none"
         ></textarea>
       </div>
+
+      {/* Error Message Display */}
+      {errorMessage && (
+        <p className="text-red-500 text-sm text-center">{errorMessage}</p>
+      )}
+
       <button
         type="submit"
-        className="w-fit bg-dark_green text-white py-2 px-4 rounded-md hover:bg-dark_green"
+        className="w-full bg-dark_green text-white py-2 px-4 rounded-md hover:bg-dark_green focus:outline-none"
       >
         Send Message
       </button>

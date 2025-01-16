@@ -1,7 +1,6 @@
 import {
   Carousel,
   Contact,
-  Footer,
   Portfolio,
   Process,
   ServicesSection,
@@ -11,17 +10,16 @@ import {
 const Home = () => {
   return (
     <div className="w-full bg-gray-50">
-      <div className="px-10 pt-10">
+      <div className="px-2 lg:px-10 pt-10">
         <Carousel />
       </div>
-      <div className="px-10 pt-5 pb-10 ">
+      <div className="px-2 pt-5 pb-10 ">
         <WhatAbout />
       </div>
       <ServicesSection />
       <Process />
       <Portfolio />
       <Contact />
-      <Footer />
     </div>
   );
 };

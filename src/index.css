@@ -5,7 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
-.uidi {
+.uid {
   @apply border-2 border-red-600;
 }
 
