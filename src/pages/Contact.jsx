@@ -1,5 +1,11 @@
+import ContactPageComponent from "../components/contact/ContactPageComponent";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <ContactPageComponent />
+    </div>
+  );
 };
 
 export default Contact;
