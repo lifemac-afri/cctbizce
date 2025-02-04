@@ -25,22 +25,22 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
           <ul className="text-sm space-y-3 text-primary_gray">
             <li>
-              <a href="/" className="hover:text-[#373D4B]">
+              <a href="/" className="hover:text-white">
                 Home
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-[#373D4B]">
+              <a href="/about" className="hover:text-white">
                 About
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-[#373D4B]">
+              <a href="/contact" className="hover:text-white">
                 Contact
               </a>
             </li>
             <li>
-              <a href="/services" className="hover:text-[#373D4B]">
+              <a href="/services" className="hover:text-white">
                 Services
               </a>
             </li>
@@ -65,7 +65,7 @@ const Footer = () => {
               href="https://www.facebook.com/cctbizce"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#373D4B]"
+              className="text-white hover:text-white"
             >
               <FaFacebook size={24} />
             </a>
@@ -73,7 +73,7 @@ const Footer = () => {
               href="https://www.x.com/cctbizce"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#373D4B]"
+              className="text-white hover:text-white"
             >
               <FaTwitter size={24} />
             </a>
@@ -81,7 +81,7 @@ const Footer = () => {
               href="https://www.instagram.com/cctbizce/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#373D4B]"
+              className="text-white hover:text-white"
             >
               <FaInstagram size={24} />
             </a>
@@ -89,7 +89,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/cctbizce/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#373D4B]"
+              className="text-white hover:text-white"
             >
               <FaLinkedin size={24} />
             </a>

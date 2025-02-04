@@ -16,3 +16,10 @@ html {
 .btn {
   @apply shadow font-light uppercase;
 }
+
+.clip-paint {
+  -webkit-mask-image: url("./assets/explosion.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}

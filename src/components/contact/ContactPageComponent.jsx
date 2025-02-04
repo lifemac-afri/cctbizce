@@ -7,6 +7,10 @@ import {
   FaPhone,
   FaClock,
   FaComments,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+  FaFacebook,
 } from "react-icons/fa";
 import ContactForm from "../home/ContactForm";
 import { car1, car2 } from "../../assets";
@@ -55,7 +59,7 @@ const ContactPageComponent = () => {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
       {/* Hero Section with Background Image */}
-      <div className="relative h-[400px] mb-16">
+      <div className="relative h-[600px] mb-16">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={car1}
@@ -72,6 +76,41 @@ const ContactPageComponent = () => {
             Transform your business vision into reality with CCT Business
             Consult & Events
           </p>
+
+          <div className="flex space-x-4 mt-16">
+            <a
+              href="https://www.facebook.com/cctbizce"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary_green"
+            >
+              <FaFacebook size={30} />
+            </a>
+            <a
+              href="https://www.x.com/cctbizce"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary_green"
+            >
+              <FaTwitter size={30} />
+            </a>
+            <a
+              href="https://www.instagram.com/cctbizce/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary_green"
+            >
+              <FaInstagram size={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/cctbizce/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary_green"
+            >
+              <FaLinkedin size={30} />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -142,11 +181,16 @@ const ContactPageComponent = () => {
 
               {/* Map Placeholder */}
               <div className="mt-8 rounded-lg overflow-hidden shadow-md">
-                <img
-                  src="/api/placeholder/600/300"
-                  alt="Office Location Map"
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.423325912955!2d0.469248775989212!3d6.594191793399522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102725ef627b3335%3A0x94e91c33f4c15d35!2sTorchbearers%20Books%20and%20Stationery%20Services%20-%20%23TBSSGh!5e0!3m2!1sen!2sgh!4v1738673596410!5m2!1sen!2sgh"
+                  width="400"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-48 object-cover"
-                />
+                ></iframe>
               </div>
             </div>
           </div>

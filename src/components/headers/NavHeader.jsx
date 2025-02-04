@@ -9,7 +9,7 @@ import { FaEllipsis, FaX } from "react-icons/fa6";
 import data from "./data"; // Import your nav data and services
 import { logo } from "../../assets";
 import { BsTwitterX } from "react-icons/bs";
-import { NavLink } from "react-router-dom";
+import StableNavigation from "./StableNavigation";
 
 const NavHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,64 +27,7 @@ const NavHeader = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {data.map((item) =>
-            item.items && item.items.length > 0 ? (
-              <div className="relative group" key={item.title}>
-                <NavLink
-                  to={item.link}
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-sm font-medium text-primary_green"
-                      : "text-sm font-medium text-gray-800 hover:text-primary_green"
-                  }
-                >
-                  {item.title}
-                </NavLink>
-                {/* Dropdown */}
-                <div
-                  className="absolute hidden group-hover:flex flex-col bg-white shadow-md rounded-lg mt-2 w-56 z-10"
-                  onMouseEnter={(e) => e.currentTarget.classList.add("flex")}
-                  onMouseLeave={(e) => e.currentTarget.classList.remove("flex")}
-                >
-                  {item.items?.map((subItem) => (
-                    <NavLink
-                      key={subItem.title}
-                      to={subItem.href || "#"}
-                      className={({ isActive }) =>
-                        `px-4 py-2 text-sm ${
-                          isActive
-                            ? "bg-primary_green text-white"
-                            : "text-gray-700 hover:bg-gray-100"
-                        }`
-                      }
-                    >
-                      <div className="flex items-center space-x-2">
-                        {subItem.icon && (
-                          <subItem.icon className="w-4 h-4 text-primary_green" />
-                        )}
-                        <span>{subItem.title}</span>
-                      </div>
-                    </NavLink>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <NavLink
-                key={item.title}
-                to={item.link}
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-sm font-medium text-primary_green"
-                    : "text-sm font-medium text-gray-800 hover:text-primary_green"
-                }
-              >
-                {item.title}
-              </NavLink>
-            )
-          )}
-        </nav>
-
+        <StableNavigation data={data} />
         {/* Right Section (Desktop only) */}
         <div className="hidden md:flex items-center space-x-4">
           <div className="flex justify-center space-x-4 gap-2">
@@ -152,13 +95,6 @@ const NavHeader = () => {
         <div className="md:hidden bg-white shadow-md">
           <nav className="flex flex-col space-y-4 px-4 py-2">
             <div className="flex justify-between items-center mb-4">
-              {/* Branding & WhatsApp only in mobile */}
-              {/* <div className="flex items-center space-x-2">
-                <img src={logo} alt="Rowix Logo" className="h-10 w-10" />
-                <div className="text-base font-bold text-gray-800">
-                  CCT Business Consult
-                </div>
-              </div> */}
               <a
                 href="https://wa.link/49ca5k"
                 className="bg-primary_green text-white px-4 py-2 rounded shadow-md text-sm font-semibold whitespace-nowrap flex items-center gap-2 mt3"
