@@ -114,7 +114,7 @@ const CardsLayout = ({ category, icon: Icon, services }) => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center mb-6">
+        <div className="flex items-center justify-center mb-6 py-6">
           <Icon className="w-10 h-10 text-primary_green mr-4" />
           <h2 className="text-3xl font-bold text-gray-800">{category}</h2>
         </div>
@@ -122,7 +122,7 @@ const CardsLayout = ({ category, icon: Icon, services }) => {
           {services.map((service) => (
             <div
               key={service}
-              className="group bg-white p-6 py-20 rounded-2xl shadow-sm hover:shadow-lg justify-center items-center flex transition-shadow duration-300"
+              className="group bg-white p-6 py-20 rounded-2xl shadow-sm hover:shadow-lg text-center justify-center items-center flex transition-shadow duration-300"
             >
               <div className="flex items-center space-x-2">
                 {/* <span className="text-primary_green">•</span> */}
@@ -143,7 +143,7 @@ const TextOnlyLayout = ({ category, services }) => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center mb-6">
+        <div className="flex items-center justify-center mb-6 py-10">
           {/* <Icon className="w-10 h-10 text-primary_green mr-4" /> */}
           <FaCalendarAlt className="w-10 h-10 text-primary_green mr-4" />
           <h2 className="text-3xl font-bold text-gray-800">{category}</h2>
@@ -152,7 +152,7 @@ const TextOnlyLayout = ({ category, services }) => {
           {services.map((service) => (
             <li
               key={service}
-              className="bg-gray-200 p-6 py-20 text-lg shadow-sm hover:shadow-lg transition-shadow duration-300 group border-r-8 border-gray-700 "
+              className="bg-gray-200 p-10 py-20 text-lg shadow-sm hover:shadow-lg text-center transition-shadow duration-300 group border-r-8 border-gray-700 "
             >
               <div className="flex items-start space-x-2">
                 {/* <span className="text-primary_green">•</span> */}
