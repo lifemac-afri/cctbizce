@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import {
   About,
+  Blog,
   Contact,
   Home,
   NotFound,
@@ -36,6 +37,10 @@ function App() {
         {
           path: "contact",
           element: <Contact />,
+        },
+        {
+          path: "blog",
+          element: <Blog />,
         },
       ],
     },
