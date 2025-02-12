@@ -8,8 +8,14 @@ import {
   NotFound,
   ServiceDetails,
   Services,
+  ResourceDocs,
 } from "./pages";
 import Layout from "./layout/Layout";
+//forms
+import BirthCertificationForm from "./pages/forms/BirthCertificateForm";
+import CompanyForm from "./pages/forms/CompanyForm";
+import SoleProprietorshipForm from "./pages/forms/SoleProprietorshipForm";
+import PassportApplicationForm from "./pages/forms/PassportApplicationForm";
 
 function App() {
   const router = createBrowserRouter([
@@ -42,6 +48,27 @@ function App() {
           path: "blog",
           element: <Blog />,
         },
+        {
+          path: "resource_docs",
+          element: <ResourceDocs />,
+        },
+        //Routes for forms
+        {
+          path: "forms/company",
+          element: <CompanyForm />,
+        },
+        {
+          path: "forms/sole_proprietorship",
+          element: <SoleProprietorshipForm />,
+        },
+        {
+          path: "forms/passport_application",
+          element: <PassportApplicationForm />,
+        },
+        {
+          path: "forms/birth_certificate",
+          element: <BirthCertificationForm />,
+        }
       ],
     },
     {

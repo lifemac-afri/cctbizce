@@ -5,5 +5,6 @@ import Home from "./Home";
 import NotFound from "./NotFound";
 import ServiceDetails from "./ServiceDetails";
 import Services from "./Services";
+import ResourceDocs from "./ResourceDocs";
 
-export { Home, About, Services, ServiceDetails, Contact, NotFound, Blog };
+export { Home, About, Services, ServiceDetails, Contact, NotFound, Blog, ResourceDocs };

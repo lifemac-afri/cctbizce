@@ -64,7 +64,7 @@ const data = [
     link: "/services",
     items: services,
   },
-  { title: "Resource Docs", link: "/downloads", items: [] },
+  { title: "Resource Docs", link: "/resource_docs", items: [] },
   {
     title: "Blog",
     link: "/blog",
