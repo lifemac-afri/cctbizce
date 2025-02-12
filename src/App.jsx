@@ -9,6 +9,7 @@ import {
   ServiceDetails,
   Services,
   ResourceDocs,
+  BlogDetailPage,
 } from "./pages";
 import Layout from "./layout/Layout";
 //forms
@@ -49,6 +50,10 @@ function App() {
           element: <Blog />,
         },
         {
+          path: "blog/:id",
+          element: <BlogDetailPage />,
+        },
+        {
           path: "resource_docs",
           element: <ResourceDocs />,
         },
@@ -68,7 +73,7 @@ function App() {
         {
           path: "forms/birth_certificate",
           element: <BirthCertificationForm />,
-        }
+        },
       ],
     },
     {
