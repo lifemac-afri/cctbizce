@@ -331,7 +331,7 @@ const CompanyForm = () => {
           )}
 
           {/* Navigation Buttons */}
-          <div className="flex justify-between mt-8">
+          <div className="flex justify-evenly mt-8">
             {step > 1 && (
               <button
                 type="button"
