@@ -27,46 +27,55 @@ const BirthCertificateForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="First Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Middle Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Surname"
+                  required
                 />
                 <input
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Date of Birth"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Place of Birth"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Residential Address of Child"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Telephone"
+                  required
                 />
               </div>
             </div>
@@ -81,76 +90,91 @@ const BirthCertificateForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Father's Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Nationality"
+                  required
                 />
                 <input
                   type="number"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Age"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Marital Status"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="National ID Type"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Residential Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Town"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="National ID Number"
+                  required
                 />
                 <input
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Date of Issue"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Father's Telephone"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Father's Occupation"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Level of Education"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Father's Religion"
+                  required
                 />
               </div>
             </div>
@@ -165,71 +189,85 @@ const BirthCertificateForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Mother's Maiden Name"
+                  required
                 />
                 <input
                   type="number"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Age"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Marital Status"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="National ID Type"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Residential Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Town"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="National ID Number"
+                  required
                 />
                 <input
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Date of Issue"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Religion"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Mother's Telephone"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Mother's Occupation"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Level of Education"
+                  required
                 />
               </div>
             </div>
@@ -244,51 +282,61 @@ const BirthCertificateForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Informant Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Relationship"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Residential Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Town"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="ID Type"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="National ID Number"
+                  required
                 />
                 <input
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Date of Issue"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Informant Telephone"
+                  required
                 />
               </div>
             </div>

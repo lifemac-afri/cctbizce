@@ -32,11 +32,13 @@ const PassportApplicationForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="First Names"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Surname"
+                  required
                 />
                 <input
                   type="text"
@@ -47,11 +49,13 @@ const PassportApplicationForm = () => {
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Date of Birth"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Place of Birth"
+                  required
                 />
                 <select className="w-full p-2 border border-gray-300 rounded-lg">
                   <option value="">Select Gender</option>
@@ -63,6 +67,7 @@ const PassportApplicationForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Height"
+                  required
                 />
                 <select className="w-full p-2 border border-gray-300 rounded-lg">
                   <option value="">Select Marital Status</option>
@@ -75,36 +80,43 @@ const PassportApplicationForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Occupation"
+                  required
                 />
                 <input
                   type="tel"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Mobile Number"
+                  required
                 />
                 <input
                   type="email"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Email Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Voter ID"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Ghana Card Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="SSNIT Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Postal Address"
+                  required
                 />
               </div>
             </div>
@@ -121,31 +133,37 @@ const PassportApplicationForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Building or Landlord Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Landmark"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Digital Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Suburb"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="City of Residence"
+                  required
                 />
               </div>
             </div>
@@ -162,31 +180,37 @@ const PassportApplicationForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Name of School"
+                  required
                 />
                 <input
                   type="month"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Start Month & Year"
+                  required
                 />
                 <input
                   type="month"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="End Month & Year"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Postal Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="City"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
               </div>
             </div>
@@ -205,41 +229,49 @@ const PassportApplicationForm = () => {
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Mother’s Name"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Mother’s Hometown"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="House or Building Name"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="House Number"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Digital Address"
+                    required
                   />
                   <input
                     type="tel"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Mobile Number"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Postal Address"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Nationality"
+                    required
                   />
                   <select className="w-full p-2 border border-gray-300 rounded-lg">
                     <option value="">Is Mother Living?</option>
@@ -254,41 +286,49 @@ const PassportApplicationForm = () => {
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Father’s Name"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Father’s Hometown"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="House or Building Name"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="House Number"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Digital Address"
+                    required
                   />
                   <input
                     type="tel"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Mobile Number"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Postal Address"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Nationality"
+                    required
                   />
                   <select className="w-full p-2 border border-gray-300 rounded-lg">
                     <option value="">Is Father Living?</option>
@@ -316,41 +356,49 @@ const PassportApplicationForm = () => {
                       type="text"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`Name ${index + 1}`}
+                      required
                     />
                     <input
                       type="text"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`Occupation ${index + 1}`}
+                      required
                     />
                     <input
                       type="text"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`House or Building Name ${index + 1}`}
+                      required
                     />
                     <input
                       type="text"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`House Number ${index + 1}`}
+                      required
                     />
                     <input
                       type="text"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`Digital Address ${index + 1}`}
+                      required
                     />
                     <input
                       type="tel"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`Mobile Number ${index + 1}`}
+                      required
                     />
                     <input
                       type="text"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`Postal Address ${index + 1}`}
+                      required
                     />
                     <input
                       type="text"
                       className="w-full p-2 border border-gray-300 rounded-lg"
                       placeholder={`Relationship ${index + 1}`}
+                      required
                     />
                   </div>
                 ))}
@@ -369,41 +417,49 @@ const PassportApplicationForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Hometown"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House or Building Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Digital Address"
+                  required
                 />
                 <input
                   type="tel"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Mobile Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Postal Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Nationality"
+                  required
                 />
                 <select className="w-full p-2 border border-gray-300 rounded-lg">
                   <option value="">Is Grandparent Living?</option>
@@ -426,36 +482,43 @@ const PassportApplicationForm = () => {
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Name"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Occupation"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Position"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Business Number"
+                    required
                   />
                   <input
                     type="tel"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Personal Number"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Ghana Card Number"
+                    required
                   />
                   <input
                     type="date"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Date of Issue"
+                    required
                   />
                   <input
                     type="text"
@@ -476,21 +539,25 @@ const PassportApplicationForm = () => {
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="C/O"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="P. O. Box"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="Prefix"
+                    required
                   />
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder="City"
+                    required
                   />
                 </div>
               </div>
@@ -510,31 +577,37 @@ const PassportApplicationForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Building or Landlord Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Landmark"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Digital Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Suburb"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="City of Residence"
+                  required
                 />
               </div>
             </div>
@@ -552,6 +625,7 @@ const PassportApplicationForm = () => {
                 </label>
                 <input
                   type="file"
+                  required
                   className="w-full p-2 border border-gray-300 rounded-lg"
                 />
 
@@ -561,6 +635,7 @@ const PassportApplicationForm = () => {
                 <input
                   type="file"
                   className="w-full p-2 border border-gray-300 rounded-lg"
+                  required
                 />
 
                 <label className="block text-gray-700 font-bold mb-2">
@@ -569,6 +644,7 @@ const PassportApplicationForm = () => {
                 <input
                   type="file"
                   className="w-full p-2 border border-gray-300 rounded-lg"
+                  required
                 />
 
                 <label className="block text-gray-700 font-bold mb-2">

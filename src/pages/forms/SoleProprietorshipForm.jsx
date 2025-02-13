@@ -30,6 +30,7 @@ const SoleProprietorshipForm = () => {
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder={`Proposed Business Name ${index}`}
+                    required
                   />
                 ))}
               </div>
@@ -39,6 +40,7 @@ const SoleProprietorshipForm = () => {
                 type="text"
                 className="w-full p-2 border border-gray-300 rounded-lg"
                 placeholder="Describe the nature of your business"
+                required
               />
             </div>
           )}
@@ -52,6 +54,7 @@ const SoleProprietorshipForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Full Name"
+                  required
                 />
                 <select className="w-full p-2 border border-gray-300 rounded-lg">
                   <option value="">Select Gender</option>
@@ -63,51 +66,61 @@ const SoleProprietorshipForm = () => {
                   type="date"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Date of Birth"
+                  required
                 />
                 <input
                   type="tel"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Phone Number"
+                  required
                 />
                 <input
                   type="email"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Email"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Postal Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="City"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="TIN"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Ghana Card Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Occupation"
+                  required
                 />
               </div>
             </div>
@@ -122,36 +135,43 @@ const SoleProprietorshipForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House or Landlord’s Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Digital Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Street Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Landmark"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
               </div>
             </div>
@@ -166,36 +186,43 @@ const SoleProprietorshipForm = () => {
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House or Landlord’s Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House Number"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Digital Address"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Street Name"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Landmark"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  required
                 />
                 <input
                   type="text"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  required
                 />
               </div>
             </div>
@@ -209,12 +236,12 @@ const SoleProprietorshipForm = () => {
                 <label className="block text-gray-700 font-bold mb-2">
                   1. Front and Back of your Ghana Card
                 </label>
-                <input type="file" className="w-full p-2 border border-gray-300 rounded-lg" />
+                <input type="file" className="w-full p-2 border border-gray-300 rounded-lg" required/>
 
                 <label className="block text-gray-700 font-bold mb-2">
                   2. Your Signature on a Plain Sheet
                 </label>
-                <input type="file" className="w-full p-2 border border-gray-300 rounded-lg" />
+                <input type="file" className="w-full p-2 border border-gray-300 rounded-lg" required/>
 
                 <p className="text-sm text-gray-600">
                   <strong>NB:</strong> Provide your mother’s maiden name if you don’t have TIN.
