@@ -1,12 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
 
 // Import background images for each form preview
-import companyBg from '../assets/handshake.png'
-import solePropBg from '../assets/engage.png'
-import birthCertBg from '../assets/documents.png'
-import passportBg from '../assets/passport.jpg'
-
+import companyBg from "../assets/handshake.png";
+import solePropBg from "../assets/engage.png";
+import birthCertBg from "../assets/documents.png";
+import passportBg from "../assets/passport.jpg";
+import SEO from "../components/seo/SEO";
 
 const ResourceDocsPage = () => {
   const forms = [
@@ -24,7 +25,7 @@ const ResourceDocsPage = () => {
       description:
         "Start your sole proprietorship journey here! This form simplifies the process of registering your business, capturing essential details about the proprietor, business address, and necessary documents. Ideal for individual business owners.",
       link: "/forms/sole_proprietorship",
-      background: solePropBg, 
+      background: solePropBg,
     },
     {
       id: 3,
@@ -46,6 +47,13 @@ const ResourceDocsPage = () => {
 
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
+      <SEO
+        title="Resources for Business and Career Growth | CCT Business Consult"
+        description="Explore business toolkits, career advice, and compliance guides to equip you for success."
+        name="CCT Business Consult & Events"
+        type="website"
+      />
+
       <h1 className="text-3xl font-bold text-gray-800 mb-8">Resource Docs</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {forms.map((form) => (
@@ -58,7 +66,6 @@ const ResourceDocsPage = () => {
               className="relative bg-cover bg-center h-64 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col justify-end p-6"
               style={{ backgroundImage: `url(${form.background})` }}
             >
-              
               <div className="absolute inset-0 bg-black bg-opacity-20 rounded-2xl"></div>
               <div className="relative z-10 text-white">
                 <h2 className="text-xl font-bold mb-2">{form.title}</h2>
