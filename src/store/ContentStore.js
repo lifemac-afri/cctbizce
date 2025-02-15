@@ -9,17 +9,26 @@ const useBlogStore = create((set) => ({
   error: null,
   selectedBlog: null,
 
-  fetchBlogById: async (id) => {
+  fetchBlogById: async (slug) => {
     set({ loading: true, error: null, selectedBlog: null });
-    const { data, error } = await supabaseClient
-      .from("blogs")
-      .select("id, title, content, category, published, created_at")
-      .eq("id", id)
-      .single();
-    if (error) {
-      set({ loading: false, error: error.message });
-    } else {
-      set({ selectedBlog: data, loading: false });
+
+    try {
+      const { data, error } = await supabaseClient
+        .from("blogs")
+        .select("title, content, category, slug, created_at")
+        .textSearch("slug", slug)
+        .single();
+
+      if (error) {
+        console.error("Supabase error:", error);
+        set({ loading: false, error: error.message });
+      } else {
+        console.log("Blog fetched successfully:", data);
+        set({ selectedBlog: data, loading: false });
+      }
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      set({ loading: false, error: err.message });
     }
   },
 
@@ -27,7 +36,8 @@ const useBlogStore = create((set) => ({
     set({ loading: true, error: null });
     const { data, error } = await supabaseClient
       .from("blogs")
-      .select("id, title, content, category, published ,created_at");
+      .select("title, content, category, published, slug ,created_at")
+      .eq("published", true);
     if (error) {
       set({ loading: false, error: error.message });
     } else {
