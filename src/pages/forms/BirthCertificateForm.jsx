@@ -59,7 +59,7 @@ const BirthCertificateForm = () => {
           {step === 1 && (
             <div>
               <h2 className="text-xl font-bold text-gray-800 mb-4">
-                Applicant's Details
+                Applicant&apos;s Details
               </h2>
               <div className="space-y-6">
                 <input
@@ -142,7 +142,7 @@ const BirthCertificateForm = () => {
           {step === 2 && (
             <div>
               <h2 className="text-xl font-bold text-gray-800 mb-4">
-                Father's Details
+                Father&apos;s Details
               </h2>
               <div className="space-y-4">
                 <input
@@ -273,7 +273,7 @@ const BirthCertificateForm = () => {
           {step === 3 && (
             <div>
               <h2 className="text-xl font-bold text-gray-800 mb-4">
-                Mother's Details
+                Mother&apos;s Details
               </h2>
               <div className="space-y-4">
                 <input

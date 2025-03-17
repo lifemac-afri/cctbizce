@@ -350,7 +350,7 @@ const PassportApplicationForm = () => {
           {step === 4 && (
             <div>
               <h2 className="text-xl font-bold text-gray-800 mb-4">
-                Parents' Details
+                Parents&apos; Details
               </h2>
               <div className="space-y-6">
                 {/* Mother's Details */}
@@ -756,7 +756,7 @@ const PassportApplicationForm = () => {
               {/* Witness' Business Address */}
               <div>
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Witness’ Business Address
+                  Witness&apos; Business Address
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <input
