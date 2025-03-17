@@ -10,6 +10,7 @@ import data from "./data"; // Import your nav data and services
 import { logo } from "../../assets";
 import { BsTwitterX } from "react-icons/bs";
 import StableNavigation from "./StableNavigation";
+import { Link } from "react-router-dom";
 
 const NavHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,19 +19,21 @@ const NavHeader = () => {
     <header className="bg-gray-50 sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo */}
-        <div className="flex items-center space-x-2 justify-center">
-          <img src={logo} alt="Rowix Logo" className="h-14 w-14" />
-          <div className="font-bold text-gray-800 flex flex-col items-center mt-2">
+        <Link to="/">
+        <div className="flex items-center space-x-2 mx-2 justify-center">
+          <img src={logo} alt="Rowix Logo" className="h-14 w-14 flex-shrink-0 min-w-[56px] min-h-[56px] sm:h-14 sm:w-14 md:h-14 md:w-14 lg:h-14 lg:w-14" />
+          <div className="font-bold text-gray-800 flex flex-col items-start mt-2 sm:flex sm:justify-between md:hidden lg:flex">
             <span className="text-base">CCT Business Consult </span>
             <span className="text-base"> & Events</span>
           </div>
         </div>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <StableNavigation data={data} />
         {/* Right Section (Desktop only) */}
         <div className="hidden md:flex items-center space-x-4">
-          <div className="flex justify-center space-x-4 gap-2">
+          <div className="flex justify-center space-x-4 gap-2 md:gap-0 md:mx-2">
             <a
               href="https://www.facebook.com/cctbizce"
               target="_blank"

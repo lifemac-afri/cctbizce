@@ -64,7 +64,7 @@ const Carousel = () => {
               <h4 className="uppercase text-xs md:text-sm tracking-wider text-dark_green font-semibold">
                 {item.intro}
               </h4>
-              <h1 className="text-xl md:text-5xl lg:text-6xl font-semibold md:leading-snug w-[650px] h-48 overflow-hidden leading-10">
+              <h1 className="text-xl md:text-5xl sm:text-left lg:text-6xl font-semibold md:leading-snug w-full md:w-[650px] overflow-visible whitespace-normal leading-10">
                 {item.main_content}
               </h1>
               <h3 className="text-sm md:text-base lg:w-[600px]">

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { supabaseClient } from "../supabase/util";
+import { supabase } from "../supabase/supabaseClient";
 
 const useBlogStore = create((set) => ({
   blogs: [],

@@ -1,24 +1,94 @@
 // src/pages/forms/SoleProprietorshipForm.jsx
 import React, { useState } from "react";
+import { supabase } from "../../supabase/supabaseClient";
 
 const SoleProprietorshipForm = () => {
-  const [step, setStep] = useState(1); // Track the current step
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({});
+  const [files, setFiles] = useState({
+    ghana_card_front: null,
+    ghana_card_back: null,
+    signature: null,
+  });
+  const [step, setStep] = useState(1);
+
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Handle file input changes
+  const handleFileChange = (e) => {
+    const { name, files: fileList } = e.target;
+    setFiles({ ...files, [name]: fileList[0] });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      // Upload files to Supabase Storage
+      const fileUploads = Object.entries(files).map(async ([key, file]) => {
+        if (file) {
+          const sanitizedFileName = sanitizedFileName(file.name)
+          const filePath = `sole_proprietorship_uploads/${Date.now()}_${sanitizedFileName}`;
+          const { data, error } = await supabase.storage
+            .from("sole_proprietorship_uploads")
+            .upload(filePath, file);
+
+          if (error) throw error;
+
+          // Generate the public URL for the uploaded file
+          const { data: publicUrlData } = supabase.storage
+            .from("sole_proprietorship_uploads")
+            .getPublicUrl(filePath);
+
+          return { [key]: publicUrlData.publicUrl }; // Save the public URL
+        }
+        return { [key]: null };
+      });
+
+      // Wait for all file uploads to complete
+      const uploadedFiles = await Promise.all(fileUploads);
+      const fileUrls = uploadedFiles.reduce((acc, curr) => ({ ...acc, ...curr }), {});
+
+      // Insert data into the sole_proprietorship_applications table
+      const { data, error } = await supabase
+        .from("sole_proprietorship_applications")
+        .insert([{ ...formData, ...fileUrls }]);
+
+      if (error) throw error;
+
+      console.log("Data inserted successfully:", data);
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert(`Failed to submit form: ${error.message}`);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Function to go to the next step
   const nextStep = () => {
     setStep(step + 1);
+    window.scrollTo({top: 0, behavior: "auto"})
   };
 
   // Function to go to the previous step
   const prevStep = () => {
     setStep(step - 1);
+    window.scrollTo({top: 0, behavior: "auto"})
   };
 
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
       <h1 className="text-3xl font-bold text-gray-800 mb-8">Requirement for Sole Proprietorship</h1>
       <div className="bg-white p-6 rounded-2xl shadow-sm">
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           {/* Step 1: Proposed Business Name and Nature of Business */}
           {step === 1 && (
             <div>
@@ -28,8 +98,10 @@ const SoleProprietorshipForm = () => {
                   <input
                     key={index}
                     type="text"
+                    name={`business_name_${index}`}
                     className="w-full p-2 border border-gray-300 rounded-lg"
                     placeholder={`Proposed Business Name ${index}`}
+                    onChange={handleChange}
                     required
                   />
                 ))}
@@ -38,8 +110,10 @@ const SoleProprietorshipForm = () => {
               <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">Nature of Business</h2>
               <input
                 type="text"
+                name="nature_of_business"
                 className="w-full p-2 border border-gray-300 rounded-lg"
                 placeholder="Describe the nature of your business"
+                onChange={handleChange}
                 required
               />
             </div>
@@ -52,11 +126,18 @@ const SoleProprietorshipForm = () => {
               <div className="space-y-4">
                 <input
                   type="text"
+                  name="full_name"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Full Name"
+                  onChange={handleChange}
                   required
                 />
-                <select className="w-full p-2 border border-gray-300 rounded-lg">
+                <select
+                  name="gender"
+                  className="w-full p-2 border border-gray-300 rounded-lg"
+                  onChange={handleChange}
+                  required
+                >
                   <option value="">Select Gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -64,62 +145,82 @@ const SoleProprietorshipForm = () => {
                 </select>
                 <input
                   type="date"
+                  name="date_of_birth"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Date of Birth"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="tel"
+                  name="phone_number"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Phone Number"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="email"
+                  name="email"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Email"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="postal_address"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Postal Address"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="city"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="City"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="district"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="region"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="tin"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="TIN"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="ghana_card_number"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Ghana Card Number"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="occupation"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Occupation"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -133,44 +234,58 @@ const SoleProprietorshipForm = () => {
               <div className="space-y-4">
                 <input
                   type="text"
+                  name="business_house_name"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House or Landlord’s Name"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="business_house_number"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House Number"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="business_digital_address"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Digital Address"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="business_street_name"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Street Name"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="business_landmark"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Landmark"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="business_district"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="business_region"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -184,44 +299,58 @@ const SoleProprietorshipForm = () => {
               <div className="space-y-4">
                 <input
                   type="text"
+                  name="residential_house_name"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House or Landlord’s Name"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="residential_house_number"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="House Number"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="residential_digital_address"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Digital Address"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="residential_street_name"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Street Name"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="residential_landmark"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Landmark"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="residential_district"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="District"
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
+                  name="residential_region"
                   className="w-full p-2 border border-gray-300 rounded-lg"
                   placeholder="Region"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -236,12 +365,33 @@ const SoleProprietorshipForm = () => {
                 <label className="block text-gray-700 font-bold mb-2">
                   1. Front and Back of your Ghana Card
                 </label>
-                <input type="file" className="w-full p-2 border border-gray-300 rounded-lg" required/>
+                <h3  className="font-bold text-gray-600 mb-4">Front</h3>
+                <input
+                  type="file"
+                  name="ghana_card_front"
+                  className="w-full p-2 border border-gray-300 rounded-lg"
+                  onChange={handleFileChange}
+                  required
+                />
+                <h3 className="font-bold text-gray-600 mb-4">Back</h3>
+                <input
+                  type="file"
+                  name="ghana_card_back"
+                  className="w-full p-2 border border-gray-300 rounded-lg"
+                  onChange={handleFileChange}
+                  required
+                />
 
                 <label className="block text-gray-700 font-bold mb-2">
                   2. Your Signature on a Plain Sheet
                 </label>
-                <input type="file" className="w-full p-2 border border-gray-300 rounded-lg" required/>
+                <input
+                  type="file"
+                  name="signature"
+                  className="w-full p-2 border border-gray-300 rounded-lg"
+                  onChange={handleFileChange}
+                  required
+                />
 
                 <p className="text-sm text-gray-600">
                   <strong>NB:</strong> Provide your mother’s maiden name if you don’t have TIN.
@@ -274,8 +424,9 @@ const SoleProprietorshipForm = () => {
               <button
                 type="submit"
                 className="bg-primary_green text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors"
+                disabled={loading}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             )}
           </div>
