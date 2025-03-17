@@ -12,13 +12,8 @@ const FirstHeader = () => {
         aria-label="Email for events"
       />
       <Pill
-        icon={<MdMail className="w-5 h-5 fill-green-50" />}
-        text={"info@cctbusiness.com"}
-        aria-label="General info email"
-      />
-      <Pill
         icon={<IoIosPin className="w-5 h-5 fill-green-50" />}
-        text={"20 Ho Poly St - Ho, Ghana"}
+        text={"Accra, Kumasi, Ho"}
         aria-label="Office address"
       />
       <Pill

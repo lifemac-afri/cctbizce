@@ -56,10 +56,12 @@ const BlogList = () => {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Insights & Strategies
+          </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our latest thoughts, ideas, and insights about technology,
-            design, and development.
+            Explore expert advice, actionable strategies, and the latest trends
+            in business growth, leadership, and innovation.
           </p>
         </div>
 
@@ -102,7 +104,7 @@ const BlogList = () => {
                   {blog.content.replace(/<[^>]*>/g, "").slice(0, 150)}...
                 </p>
                 <button
-                  onClick={() => navigate(`/blog/${blog.id}`)}
+                  onClick={() => navigate(`/blog/${blog.slug}`)}
                   className="text-primary_green hover:text-dark_green font-medium transition-colors duration-200"
                 >
                   Read More →

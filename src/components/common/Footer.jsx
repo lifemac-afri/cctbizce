@@ -6,6 +6,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { IoIosPin } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Section */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">About Us</h2>
+          <h2 className="text-xl font-semibold mb-4">About Us</h2>
           <p className="text-sm ">
             We&apos;re committed to providing excellent customer service.
             Contact us anytime for more information about our services.
@@ -23,7 +24,7 @@ const Footer = () => {
         {/* Quick Links */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
-          <ul className="text-sm space-y-3 text-primary_gray">
+          <ul className="text-lg space-y-3 text-primary_gray">
             <li>
               <a href="/" className="hover:text-white">
                 Home
@@ -58,6 +59,12 @@ const Footer = () => {
             <HiOutlineMail className="mr-2" />
             <a href="mailto:info@cctbusiness.com">
               <span>info@cctbusiness.com</span>
+            </a>
+          </div>
+          <div className="flex items-center mb-3 text-primary_gray">
+            <IoIosPin className="mr-2" />
+            <a href="mailto:info@cctbusiness.com">
+              <span>Accra, Kumasi, Ho </span>
             </a>
           </div>
           <div className="flex space-x-4 mt-4">
