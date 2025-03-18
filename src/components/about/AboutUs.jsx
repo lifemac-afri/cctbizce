@@ -59,7 +59,7 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-primary_gray bg-opacity-75 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-5xl font-extrabold text-white mb-4">
-              About CCT Business Consult & Events
+              About CCT Business Consult &apm; Events
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Your trusted partner for professional consultancy and events

@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { supabase } from "../supabase/supabaseClient";
 
+
 const useBlogStore = create((set) => ({
   blogs: [],
   categories: [],
@@ -13,7 +14,7 @@ const useBlogStore = create((set) => ({
     set({ loading: true, error: null, selectedBlog: null });
 
     try {
-      const { data, error } = await supabaseClient
+      const { data, error } = await supabase
         .from("blogs")
         .select("title, content, category, slug, created_at")
         .textSearch("slug", slug)
@@ -34,7 +35,7 @@ const useBlogStore = create((set) => ({
 
   fetchBlogs: async () => {
     set({ loading: true, error: null });
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabase
       .from("blogs")
       .select("title, content, category, published, slug ,created_at")
       .eq("published", true);
@@ -47,7 +48,7 @@ const useBlogStore = create((set) => ({
 
   fetchCategories: async () => {
     set({ loading: true, error: null });
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabase
       .from("categories")
       .select("id, name, created_at");
     if (error) {
