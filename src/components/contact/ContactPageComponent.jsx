@@ -74,7 +74,7 @@ const ContactPageComponent = () => {
           </h1>
           <p className="text-xl text-gray-100 max-w-2xl">
             Transform your business vision into reality with CCT Business
-            Consult &amp; Events
+            Consult & Events
           </p>
 
           <div className="flex space-x-4 mt-16">
