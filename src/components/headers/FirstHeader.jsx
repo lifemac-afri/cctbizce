@@ -8,7 +8,7 @@ const FirstHeader = () => {
     <nav className="w-full bg-primary_green bg-opacity-100 shadow px-5 sm:px-20 py-2 md:flex flex-col md:px-10 sm:flex-row sm:justify-between gap-3 sm:gap-0 hidden ">
       <Pill
         icon={<MdMail className="w-5 h-5 fill-green-50" />}
-        text={"cctbizconsult.events@gmail.com"}
+        text={"cctbusinessconsult@gmail.com"}
         aria-label="Email for events"
       />
       <Pill

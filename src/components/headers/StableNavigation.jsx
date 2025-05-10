@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
@@ -56,7 +57,8 @@ const StableNavigation = ({ data }) => {
                     <div className="flex items-center space-x-2">
                       {subItem.icon && (
                         <div className="w-7 h-7 text-gray-700">
-                          {subItem.icon} {/* Render the icon as a React element */}
+                          {subItem.icon}{" "}
+                          {/* Render the icon as a React element */}
                         </div>
                       )}
                       <span>{subItem.title}</span>
@@ -99,19 +101,6 @@ StableNavigation.propTypes = {
 };
 
 export default StableNavigation;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // /* eslint-disable no-unused-vars */
 // import React, { useState, useEffect, useRef } from "react";

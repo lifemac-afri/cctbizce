@@ -45,6 +45,11 @@ const Footer = () => {
                 Services
               </a>
             </li>
+            <li>
+              <a href="/resource_docs" className="hover:text-white">
+                Forms
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -57,8 +62,8 @@ const Footer = () => {
           </div>
           <div className="flex items-center mb-3 text-primary_gray">
             <HiOutlineMail className="mr-2" />
-            <a href="mailto:info@cctbusiness.com">
-              <span>info@cctbusiness.com</span>
+            <a href="mailto:cctbusinessconsult@gmail.com">
+              <span>cctbusinessconsult@gmail.com</span>
             </a>
           </div>
           <div className="flex items-center mb-3 text-primary_gray">

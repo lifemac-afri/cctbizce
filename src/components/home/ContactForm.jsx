@@ -63,13 +63,13 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="w-full max-w-md mx-auto flex flex-col items-center gap-5">
-        <h2 className="text-2xl font-bold text-dark_green">
+      <div className="w-full h-full flex flex-col items-center justify-center gap-5">
+        <h2 className="text-2xl font-bold text-dark_green text-center">
           Thank you for reaching out!
         </h2>
-        <p className="text-lg text-gray-600">
-          Your message has been successfully submitted. We’ll get back to you
-          shortly.
+        <p className="text-lg text-gray-600 text-center">
+          Your message has been successfully submitted. We&apos;ll get back to
+          you shortly.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
@@ -84,7 +84,8 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-md mx-auto flex flex-col items-start gap-5"
+      className="w-full h-full flex flex-col justify-center gap-6"
+      style={{ minHeight: "420px" }}
     >
       {/* Form Inputs for Name and Email */}
       <div className="w-full flex flex-col sm:flex-row gap-4">
@@ -96,7 +97,7 @@ const ContactForm = () => {
           onChange={handleInputChange}
           placeholder="Full name"
           required
-          className="mt-1 p-2 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:border-[#F2EEE6] focus:outline-none"
+          className="mt-1 p-3 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:border-[#F2EEE6] focus:outline-none text-base"
         />
         <input
           type="email"
@@ -106,12 +107,12 @@ const ContactForm = () => {
           onChange={handleInputChange}
           placeholder="Email address"
           required
-          className="mt-1 p-2 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:ring-[#F2EEE6] focus:border-[#F2EEE6] focus:outline-none"
+          className="mt-1 p-3 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:ring-[#F2EEE6] focus:border-[#F2EEE6] focus:outline-none text-base"
         />
       </div>
 
       {/* Message Textarea */}
-      <div className="w-full">
+      <div className="w-full flex-1 flex flex-col">
         <textarea
           id="message"
           name="message"
@@ -119,18 +120,21 @@ const ContactForm = () => {
           onChange={handleInputChange}
           required
           placeholder="How can we help you?"
-          className="h-64 p-2 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:ring-[#F2EEE6] focus:border-[#F2EEE6] resize-none"
+          className="flex-1 min-h-[180px] h-full p-3 w-full bg-[#dfdacf] bg-opacity-20 border-gray-300 rounded-md focus:ring-[#F2EEE6] focus:border-[#F2EEE6] resize-none text-base"
+          style={{ minHeight: "180px", maxHeight: "260px" }}
         ></textarea>
       </div>
 
       {/* Error Message Display */}
       {errorMessage && (
-        <p className="text-red-500 text-sm text-center">{errorMessage}</p>
+        <p className="text-red-500 text-sm text-center w-full">
+          {errorMessage}
+        </p>
       )}
 
       <button
         type="submit"
-        className="w-full bg-dark_green text-white py-2 px-4 rounded-md hover:bg-dark_green focus:outline-none"
+        className="w-full bg-dark_green text-white py-3 px-4 rounded-md text-lg font-semibold hover:bg-dark_green focus:outline-none transition"
       >
         Send Message
       </button>

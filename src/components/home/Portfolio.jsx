@@ -40,13 +40,10 @@ const Portfolio = () => {
             <Slider {...settings} className="h-full w-full">
               <div className="w-full p-10 flex flex-col">
                 <div className="max-h-fit flex-1 tracking-wider leading-loose">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae quas ad minus magni sed saepe? Alias id ut dicta
-                  eligendi dolor inventore, velit maxime officiis consequuntur
-                  aliquid accusamus, molestiae nam fuga deserunt adipisci, iusto
-                  similique consectetur error. Nisi aliquid temporibus, tenetur
-                  sint ullam expedita incidunt ad quam veritatis obcaecati
-                  perspiciatis.
+                  I had an amazing experience working with CCT Business Consult!
+                  They made the process of securing my passport and refining my
+                  CV smooth and stress-free. I highly recommend their services
+                  to anyone in need of reliable and trustworthy support. --
                 </div>
                 <div className="bg-dark_green w-full border-[1px] border-dark_green opacity-55 my-5"></div>
                 <div className="flex items-center gap-3">
@@ -57,11 +54,8 @@ const Portfolio = () => {
                   />
                   <div>
                     <h1 className="font-medium capitalize text-lg">
-                      Lorem, ipsum.
+                      Sandra Bansah
                     </h1>
-                    <h4 className="text-dark_green text-xs uppercase font-light">
-                      Lorem, ipsum dolor.
-                    </h4>
                   </div>
                 </div>
               </div>

@@ -20,13 +20,17 @@ const NavHeader = () => {
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo */}
         <Link to="/">
-        <div className="flex items-center space-x-2 mx-2 justify-center">
-          <img src={logo} alt="Rowix Logo" className="h-14 w-14 flex-shrink-0 min-w-[56px] min-h-[56px] sm:h-14 sm:w-14 md:h-14 md:w-14 lg:h-14 lg:w-14" />
-          <div className="font-bold text-gray-800 flex flex-col items-start mt-2 sm:flex sm:justify-between md:hidden lg:flex">
-            <span className="text-base">CCT Business Consult </span>
-            <span className="text-base"> & Events</span>
+          <div className="flex items-center space-x-2 mx-2 justify-center">
+            <img
+              src={logo}
+              alt="Rowix Logo"
+              className="h-14 w-14 flex-shrink-0 min-w-[56px] min-h-[56px] sm:h-14 sm:w-14 md:h-14 md:w-14 lg:h-14 lg:w-14"
+            />
+            <div className="font-bold text-gray-800 flex flex-col items-start mt-2">
+              <span className="text-base">CCT Business Consult</span>
+              <span className="text-base">& Events</span>
+            </div>
           </div>
-        </div>
         </Link>
 
         {/* Desktop Navigation Links */}

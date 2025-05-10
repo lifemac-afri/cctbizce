@@ -44,10 +44,10 @@ const WhatAbout = () => {
             <div className="mt-4 sm:mt-0 text-center sm:text-left">
               <span className="block font-semibold">Get Support</span>
               <a
-                href="mailto:info@cctbusiness.com"
+                href="mailto:cctbusinessconsult@gmail.com"
                 className="text-dark_green underline"
               >
-                info@cctbusiness.com
+                cctbusinessconsult@gmail.com
               </a>
             </div>
           </div>
