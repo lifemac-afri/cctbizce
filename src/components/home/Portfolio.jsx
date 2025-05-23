@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { car3, side } from "../../assets";
+import { moses, sandra, side } from "../../assets";
 
 const Portfolio = () => {
   const settings = {
@@ -48,13 +48,34 @@ const Portfolio = () => {
                 <div className="bg-dark_green w-full border-[1px] border-dark_green opacity-55 my-5"></div>
                 <div className="flex items-center gap-3">
                   <img
-                    src={car3}
+                    src={sandra}
                     alt="Client profile"
                     className="w-14 h-14 rounded-full shadow object-cover object-center"
                   />
                   <div>
                     <h1 className="font-medium capitalize text-lg">
                       Sandra Bansah
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full p-10 flex flex-col">
+                <div className="max-h-fit flex-1 tracking-wider leading-loose">
+                  3 working days! That was all it took for me to get my business
+                  registration documents. Your speed of delivery, your customer
+                  service and your valuable insight that guided me are truly
+                  immense. Thank you, CCT.
+                </div>
+                <div className="bg-dark_green w-full border-[1px] border-dark_green opacity-55 my-5"></div>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={moses}
+                    alt="Client profile"
+                    className="w-14 h-14 rounded-full shadow object-cover object-center"
+                  />
+                  <div>
+                    <h1 className="font-medium capitalize text-lg">
+                      Moses O. Olalowo
                     </h1>
                   </div>
                 </div>

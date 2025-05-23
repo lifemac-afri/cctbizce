@@ -17,6 +17,8 @@ import business2 from "./bus2.png";
 import career from "./career.png";
 import workshop from "./workshop.png";
 import person_on_call from "./person_on_call.png";
+import moses from "./moses.png";
+import sandra from "./sandra.jpeg";
 export {
   logo,
   car1,
@@ -37,4 +39,6 @@ export {
   social,
   workshop,
   documents,
+  moses,
+  sandra,
 };
