@@ -43,7 +43,7 @@ const Portfolio = () => {
                   I had an amazing experience working with CCT Business Consult!
                   They made the process of securing my passport and refining my
                   CV smooth and stress-free. I highly recommend their services
-                  to anyone in need of reliable and trustworthy support. --
+                  to anyone in need of reliable and trustworthy support.
                 </div>
                 <div className="bg-dark_green w-full border-[1px] border-dark_green opacity-55 my-5"></div>
                 <div className="flex items-center gap-3">
